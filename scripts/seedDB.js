@@ -33,6 +33,12 @@ const taskSeed = [
     }
 ];
 
+const userSeed = [{
+    username: "username",
+    password: "password",
+    name: "Joe Dirt"
+}];
+
 db.Task
     .remove({})
     .then(()=>db.Task.collection.insertMany(taskSeed))
@@ -42,5 +48,17 @@ db.Task
     })
     .catch(err => {
         console.error(err);
+        process.exit(1);
+    })
+
+db.User
+    .remove({})
+    .then(()=>db.User.collection.insert(userSeed))
+    .then(data => {
+        console.log("User inserted")
+        process.exit(0)
+    })
+    .catch(err => {
+        console.log(err);
         process.exit(1);
     })
