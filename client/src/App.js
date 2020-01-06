@@ -4,7 +4,7 @@ import { ThemeProvider } from "@material-ui/styles";
 import MenuAppBar from "./components/MenuBar";
 import UserContainer from "./components/UserContainer";
 import TrackButton from "./components/TrackButton";
-import StatsButton from "./components/StatsButton";
+import STATS from "./components/StatsButton";
 import { createMuiTheme } from "@material-ui/core/styles";
 import { red, grey } from "@material-ui/core/colors";
 import Grid from "@material-ui/core/Grid";
@@ -61,7 +61,7 @@ export default function App() {
             item
             xs={6}
           >
-            <StatsButton />
+            <STATS />
           </Grid>
           <Grid item xs={6}>
             <TrackButton />
