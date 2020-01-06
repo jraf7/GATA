@@ -1,21 +1,52 @@
 import React from "react";
-import Fab from "@material-ui/core/Fab";
-import Container from "@material-ui/core/Container";
+import {
+  Container,
+  Fab,
+  Button,
+  Dialog,
+  DialogActions,
+  DialogTitle
+} from "@material-ui/core/";
 
-function StatsButton() {
+function STATS() {
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
+
   return (
     <Container>
       <Fab
         variant="extended"
-        id="stats"
         color="primary"
+        id="track"
         size="large"
-        onClick={() => alert("hello")}
+        onClick={handleClickOpen}
       >
-        Stats
+        STATS
       </Fab>
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="form-dialog-title"
+      >
+        <DialogTitle id="form-dialog-title">Your Progress</DialogTitle>
+        <DialogActions>
+
+          <Button onClick={handleClose} color="primary">
+            Done
+          </Button>
+
+        </DialogActions>
+      </Dialog>
     </Container>
   );
 }
 
-export default StatsButton;
+export default STATS;
