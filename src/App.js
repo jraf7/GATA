@@ -4,11 +4,11 @@ import { ThemeProvider } from "@material-ui/styles";
 import MenuAppBar from "./components/MenuBar";
 import UserContainer from "./components/UserContainer";
 import TrackButton from "./components/TrackButton";
-import StatsButton from "./components/StatsButtton";
+import StatsButton from "./components/StatsButton";
 import { createMuiTheme } from "@material-ui/core/styles";
 import { red, grey } from "@material-ui/core/colors";
-import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
+import "./App.css";
 
 const theme = createMuiTheme({
   palette: {
@@ -30,7 +30,9 @@ const theme = createMuiTheme({
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    textAlign: "center"
+    textAlign: "center",
+    background: "black",
+    height: "100vh"
   },
   paper: {
     padding: theme.spacing(2),
@@ -63,15 +65,6 @@ export default function App() {
           </Grid>
           <Grid item xs={6}>
             <TrackButton />
-          </Grid>
-          <Grid item xs={3}>
-            <Paper className={classes.paper}>xs=3</Paper>
-          </Grid>
-          <Grid item xs={3}>
-            <Paper className={classes.paper}>xs=3</Paper>
-          </Grid>
-          <Grid item xs={3}>
-            <Paper className={classes.paper}>xs=3</Paper>
           </Grid>
         </Grid>
       </div>

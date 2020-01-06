@@ -11,8 +11,8 @@ function UserContainer() {
           align="center"
           variant="h2"
           style={{
-            backgroundColor: "#cfe8fc",
-            height: "100px"
+            height: "100px",
+            color: "white"
           }}
         >
           Welcome Back, User
