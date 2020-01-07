@@ -6,6 +6,6 @@ const weightRoutes = require("./weight");
 // routes
 router.use("/tasks", taskRoutes);
 router.use("/users", userRoutes);
-router.use("/weight", weightRoutes);
+router.use("/weights", weightRoutes);
 
 module.exports = router;
