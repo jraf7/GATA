@@ -1,37 +1,13 @@
-import axios from "axios";
+import task from "./api/task";
+import user from "./api/user";
+import weight from "./api/weight";
+
+//use API.js to pull information from db
+//each object (task, user, weight) has a
+    //get, getOne, delete, and save method
 
 export default {
-    //get tasks
-    getTasks: function () {
-        return axios.get("/api/tasks");
-    },
-    //get task
-    getTask: function (id) {
-        return axios.get("/api/tasks" + id);
-    },
-    //delete tasks
-    deleteTask: function(id) {
-        return axios.delete("/api/tasks/" + id);
-    },
-    //save a task
-    saveTask: function (taskData) {
-        return axios.post("/api/tasks", taskData);
-    },
-
-    //get users
-    getUsers: function () {
-        return axios.get("/api/users");
-    },
-    //get a user
-    getUser: function (id) {
-        return axios.get("/api/users" + id);
-    },
-    //delete a user
-    deleteUser: function(id) {
-        return axios.delete("/api/users/" + id);
-    },
-    //save a user
-    saveUser: function (taskData) {
-        return axios.post("/api/users", taskData);
-    }
+    task,
+    user,
+    weight
 }

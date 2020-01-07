@@ -16,7 +16,20 @@ const userSchema = new Schema( {
     name: {
         type: String,
         required: true
-    }
+    },
+    tasks: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Task"
+        }
+    ],
+    weight: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Weight"
+        }
+    ]
+
 })
 
 const User = mongoose.model("User", userSchema);
