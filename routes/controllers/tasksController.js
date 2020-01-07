@@ -1,5 +1,8 @@
 //methods for task controller
+let mongoose = require('mongoose');
 const db = require("../../models")
+
+//exports mongoDB functions to be used in api routing for tasks
 
 module.exports = {
     findAll: function(req, res) {
@@ -32,6 +35,6 @@ module.exports = {
             .findById( { _id: req.params.id } )
             .then(dbTask => dbTask.remove())
             .then(dbTask => res.json(dbTask))
-            .then(err => res.status(422).json(err))
+            .catch(err => res.status(422).json(err))
     }
 };
