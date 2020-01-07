@@ -25,8 +25,8 @@ const userSchema = new Schema( {
     ],
     weight: [
         {
-            type: Number,
-            createdAt: Date
+            type: Schema.Types.ObjectId,
+            ref: "Weight"
         }
     ]
 
