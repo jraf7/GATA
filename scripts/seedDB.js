@@ -39,6 +39,21 @@ const userSeed = [{
     name: "Joe Dirt"
 }];
 
+const weightSeed = [
+    {
+        weight: 200,
+        date: new Date(2019, 12, 20)
+    },
+    {
+        weight: 202,
+        date: new Date(2019, 12, 10)
+    },
+    {
+        weight: 205,
+        date: new Date(2019, 12, 01)
+    }
+];
+
 db.Task
     .remove({})
     .then(()=>db.Task.collection.insertMany(taskSeed))
@@ -50,6 +65,18 @@ db.Task
         console.error(err);
         process.exit(1);
     })
+
+db.Weight
+    .remove({})
+    .then(()=>db.Weight.collection.insertMany(weightSeed))
+    .then(data => {
+        console.log(data.result.n + " weights inserted.");
+        process.exit(0);
+    })
+    .catch(err => {
+        console.error(err);
+        process.exit(1);
+    });
 
 db.User
     .remove({})

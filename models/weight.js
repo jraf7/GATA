@@ -14,6 +14,6 @@ const weightSchema = new Schema( {
 
 })
 
-const Task = mongoose.model("weight", weightSchema);
+const Weight = mongoose.model("weight", weightSchema);
 
 module.exports = Weight;
