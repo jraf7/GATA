@@ -8,6 +8,8 @@ import {
   DialogTitle
 } from "@material-ui/core/";
 
+import Date from './Date';
+
 function STATS() {
   const [open, setOpen] = React.useState(false);
 
@@ -30,14 +32,21 @@ function STATS() {
         onClick={handleClickOpen}
       >
         STATS
+
       </Fab>
+
+
+
       <Dialog
         open={open}
         onClose={handleClose}
         aria-labelledby="form-dialog-title"
       >
         <DialogTitle id="form-dialog-title">Your Progress</DialogTitle>
+        <Date />
         <DialogActions>
+
+
 
           <Button onClick={handleClose} color="primary">
             Done
@@ -45,6 +54,7 @@ function STATS() {
 
         </DialogActions>
       </Dialog>
+
     </Container>
   );
 }

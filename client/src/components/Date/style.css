@@ -1,0 +1,13 @@
+.MuiDialog-paperWidthSm {
+    width: 85%;
+    height: 85%;
+}
+
+body{
+
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    height: 90%;
+    align-content: center;
+    text-align-last: center;
+}
+
