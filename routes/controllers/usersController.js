@@ -1,40 +1,37 @@
-//methods for task controller
-let mongoose = require('mongoose');
-const db = require("../../models")
-
-//exports mongoDB functions to be used in api routing for tasks
+//methods for User controller
+const db = require("../../models");
 
 module.exports = {
     findAll: function(req, res) {
-        db.Task
+        db.User
             .find(req.query)
-            .sort({date: -1})
-            .then(dbTasks => res.json(dbTasks))
+            .sort({ _id: -1 })
+            .then(dbUsers => res.json(dbUsers))
             .catch(err => res.status(422).json(err));
     },
     findById: function (req, res) {
-        db.Task
+        db.User
             .findById(req.params.id)
-            .then(dbTask => res.json(dbTask))
+            .then(dbUser => res.json(dbUser))
             .catch(err => res.status(422).json(err));
     },
     create: function (req, res) {
-        db.Task
+        db.User
             .create(req.body)
-            .then(dbTask => res.json(dbTask))
+            .then(dbUser => res.json(dbUser))
             .catch(err => res.status(422).json(err))
     },
     update: function (req, res) {
-        db.Task
+        db.User
             .findOneAndUpdate({ _id: req.params.id}, req.body)
-            .then(dbTask => res.json(dbTask))
+            .then(dbUser => res.json(dbUser))
             .catch(err => res.error(422).json(err))
     },
     remove: function (req, res) {
-        db.Task
+        db.User
             .findById( { _id: req.params.id } )
-            .then(dbTask => dbTask.remove())
-            .then(dbTask => res.json(dbTask))
+            .then(dbUser => dbUser.remove())
+            .then(dbUser => res.json(dbUser))
             .catch(err => res.status(422).json(err))
     }
 };

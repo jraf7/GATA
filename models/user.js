@@ -27,6 +27,21 @@ const userSchema = new Schema({
             createdAt: Date
         }
     ]
+
+    tasks: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Task"
+        }
+    ],
+    weight: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Weight"
+        }
+    ]
+
+
 })
 
 const User = mongoose.model("User", userSchema);

@@ -1,40 +1,37 @@
-//methods for task controller
-let mongoose = require('mongoose');
-const db = require("../../models")
-
-//exports mongoDB functions to be used in api routing for tasks
+//methods for Weight controller
+const db = require("../../models");
 
 module.exports = {
     findAll: function(req, res) {
-        db.Task
+        db.Weight
             .find(req.query)
-            .sort({date: -1})
-            .then(dbTasks => res.json(dbTasks))
+            .sort({ date: -1 })
+            .then(dbWeights => res.json(dbWeights))
             .catch(err => res.status(422).json(err));
     },
     findById: function (req, res) {
-        db.Task
+        db.Weight
             .findById(req.params.id)
-            .then(dbTask => res.json(dbTask))
+            .then(dbWeight => res.json(dbWeight))
             .catch(err => res.status(422).json(err));
     },
     create: function (req, res) {
-        db.Task
+        db.Weight
             .create(req.body)
-            .then(dbTask => res.json(dbTask))
+            .then(dbWeight => res.json(dbWeight))
             .catch(err => res.status(422).json(err))
     },
     update: function (req, res) {
-        db.Task
+        db.Weight
             .findOneAndUpdate({ _id: req.params.id}, req.body)
-            .then(dbTask => res.json(dbTask))
+            .then(dbWeight => res.json(dbWeight))
             .catch(err => res.error(422).json(err))
     },
     remove: function (req, res) {
-        db.Task
+        db.Weight
             .findById( { _id: req.params.id } )
-            .then(dbTask => dbTask.remove())
-            .then(dbTask => res.json(dbTask))
+            .then(dbWeight => dbWeight.remove())
+            .then(dbWeight => res.json(dbWeight))
             .catch(err => res.status(422).json(err))
     }
 };
