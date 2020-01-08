@@ -30,14 +30,9 @@ const userSchema = new Schema({
 
   tasks: [
     {
-      type: Schema.Types.ObjectId,
-      ref: "Task"
-    }
-  ],
-  weight: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: "Weight"
+      type: String,
+      name: String,
+      createdAt: Date
     }
   ]
 });
