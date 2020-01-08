@@ -27,7 +27,6 @@ const userSchema = new Schema({
       createdAt: String
     }
   ],
-
   tasks: [
     {
       name: String,

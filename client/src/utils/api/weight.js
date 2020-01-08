@@ -2,16 +2,16 @@ import axios from "axios";
 
 const weight = {
     get: function () {
-        return axios.get("/api/weight");
+        return axios.get("/api/user/weight");
     },
     getOne: function (id) {
-        return axios.get("/api/weight" + id);
+        return axios.get("/api/user/weight" + id);
     },
     delete: function(id) {
-        return axios.delete("/api/weight/" + id);
+        return axios.delete("/api/user/weight/" + id);
     },
     save: function (weightData) {
-        return axios.post("/api/tasks", weightData);
+        return axios.post("/api/user/tasks", weightData);
     }
 }
 

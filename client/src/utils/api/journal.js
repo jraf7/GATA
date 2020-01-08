@@ -1,20 +1,20 @@
 import axios from "axios";
 
-const task =  {
+const journal =  {
     get: function () {
-        return axios.get("/api/user/tasks");
+        return axios.get("/api/user/journal");
     },
     //get task
     getOne: function (id) {
-        return axios.get("/api/user/tasks" + id);
+        return axios.get("/api/user/journal" + id);
     },
     //delete tasks
     delete: function(id) {
-        return axios.delete("/api/user/tasks/" + id);
+        return axios.delete("/api/user/journal/" + id);
     },
     //save a task
     save: function (taskData) {
-        return axios.post("/api/user/tasks", taskData);
+        return axios.post("/api/user/journal", taskData);
     }
 }
 
