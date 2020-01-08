@@ -48,7 +48,7 @@ const userSeed = [
         entry: "Had the best cauliflower pizza in my life!!"
       },
       {
-        type: "Intimate",
+        type: "intimate",
         entry: "Uhhhhhhhhh"
       }
     ]
