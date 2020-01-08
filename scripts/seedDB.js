@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const db = require("../models");
+const User = require("../models/user");
 
 //empties task collection & inserts these tasks
 
@@ -77,8 +77,8 @@ const userSeed = [
   }
 ];
 
-db.User.remove({})
-  .then(() => db.User.collection.insert(userSeed))
+User.remove({})
+  .then(() => User.collection.insert(userSeed))
   .then(data => {
     console.log("User inserted");
     process.exit(0);
