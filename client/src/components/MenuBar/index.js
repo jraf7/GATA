@@ -8,6 +8,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import MenuList from "@material-ui/core/MenuList";
 import ClickAwayListener from "@material-ui/core/ClickAwayListener";
 import Grow from "@material-ui/core/Grow";
+import {Link} from 'react-router-dom'
 
 function MenuAppBar() {
   const useStyles = makeStyles(theme => ({
@@ -86,9 +87,22 @@ function MenuAppBar() {
                         id="menu-list-grow"
                         onKeyDown={handleListKeyDown}
                       >
-                        <MenuItem onClick={handleClose}>Profile</MenuItem>
-                        <MenuItem onClick={handleClose}>My account</MenuItem>
-                        <MenuItem onClick={handleClose}>Logout</MenuItem>
+                        <MenuItem onClick={handleClose}>
+                          <Link to="/profile">
+                            Profile
+                          </Link>
+                        </MenuItem>
+                        <MenuItem onClick={handleClose}>
+                          <Link to="/main">
+                            Dashboard
+                          </Link>
+                        </MenuItem>
+                        <MenuItem onClick={handleClose}>
+                          Logout
+                        </MenuItem>
+                        <MenuItem onClick={handleClose}>
+                          About Us
+                        </MenuItem>
                       </MenuList>
                     </ClickAwayListener>
                   </Paper>

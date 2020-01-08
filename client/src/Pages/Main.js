@@ -8,7 +8,7 @@ import MenuAppBar from "../components/MenuBar";
 import UserContainer from "../components/UserContainer";
 import TrackButton from "../components/TrackButton";
 import STATS from "../components/StatsButton";
-import "./App.css";
+import "../App";
 
 const theme = createMuiTheme({
   palette: {
