@@ -8,7 +8,7 @@ import {
   DialogTitle
 } from "@material-ui/core/";
 
-import Date from './Date';
+import Date from "../Date";
 
 function STATS() {
   const [open, setOpen] = React.useState(false);
@@ -21,7 +21,6 @@ function STATS() {
     setOpen(false);
   };
 
-
   return (
     <Container>
       <Fab
@@ -32,10 +31,7 @@ function STATS() {
         onClick={handleClickOpen}
       >
         STATS
-
       </Fab>
-
-
 
       <Dialog
         open={open}
@@ -45,16 +41,11 @@ function STATS() {
         <DialogTitle id="form-dialog-title">Your Progress</DialogTitle>
         <Date />
         <DialogActions>
-
-
-
           <Button onClick={handleClose} color="primary">
             Done
           </Button>
-
         </DialogActions>
       </Dialog>
-
     </Container>
   );
 }
