@@ -9,7 +9,7 @@ const taskSeed = [
   {
     task: "Wake Up: 6 am",
     completed: true,
-    createdAt: new Date(2019, 12, 20)
+    createdAt: new Date(2019, 12, 20).toString()
   },
   {
     task: "Morning Reflection",
