@@ -2,10 +2,10 @@
 const db = require("../../models");
 
 module.exports = {
-    findAll: function(req, res) {
+    findAll: function (req, res) {
         db.User
             .find(req.query)
-            .sort({ _id: -1 })
+            // .sort({ _id: -1 })
             .then(dbUsers => res.json(dbUsers))
             .catch(err => res.status(422).json(err));
     },
@@ -23,13 +23,13 @@ module.exports = {
     },
     update: function (req, res) {
         db.User
-            .findOneAndUpdate({ _id: req.params.id}, req.body)
+            .findOneAndUpdate({ _id: req.params.id }, req.body)
             .then(dbUser => res.json(dbUser))
             .catch(err => res.error(422).json(err))
     },
     remove: function (req, res) {
         db.User
-            .findById( { _id: req.params.id } )
+            .findById({ _id: req.params.id })
             .then(dbUser => dbUser.remove())
             .then(dbUser => res.json(dbUser))
             .catch(err => res.status(422).json(err))
