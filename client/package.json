@@ -1,5 +1,5 @@
 {
-  "name": "GATA",
+  "name": "gata",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001/",
@@ -9,6 +9,8 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
+    "mobiscroll": "^3.0.0-beta6",
+    "react-calendar": "^2.19.2",
     "@wojtekmaj/react-daterange-picker": "^2.5.0",
     "axios": "^0.18.0",
     "react": "^16.6.3",
