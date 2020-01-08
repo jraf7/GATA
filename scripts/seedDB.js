@@ -7,27 +7,27 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/gata");
 
 const taskSeed = [
   {
-    task: "Wake Up: 6 am",
+    name: "Wake Up: 6 am",
     completed: true,
     createdAt: new Date(2019, 12, 20).toString()
   },
   {
-    task: "Morning Reflection",
+    name: "Morning Reflection",
     completed: true,
     createdAt: new Date(2019, 12, 20)
   },
   {
-    task: "Workout",
+    name: "Workout",
     completed: true,
     createdAt: new Date(2019, 12, 20)
   },
   {
-    task: "Don't Eat Junkfood",
+    name: "Don't Eat Junkfood",
     completed: false,
     createdAt: new Date(2019, 12, 20)
   },
   {
-    task: "Bed by 11pm",
+    name: "Bed by 11pm",
     completed: true,
     createdAt: new Date(2019, 12, 20)
   }
@@ -50,17 +50,17 @@ const weightSeed = [
 
 const journal = [
   {
-    type: "dream",
+    category: "dream",
     entry: "Falling from the sky, my biggest fear!",
     createdAt: new Date(2019, 12, 20)
   },
   {
-    type: "food",
+    category: "food",
     entry: "Had the best cauliflower pizza in my life!!",
     createdAt: new Date(2019, 12, 20)
   },
   {
-    type: "Intimate",
+    category: "Intimate",
     entry: "Uhhhhhhhhh",
     createdAt: new Date(2019, 12, 20)
   }

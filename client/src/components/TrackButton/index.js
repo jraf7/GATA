@@ -25,7 +25,8 @@ class TrackButton extends Component {
   };
 
   componentDidMount() {
-    API.task.get().then(res => this.setState({ tasks: res.data }));
+    API.user.get().then(res => console.log('res.data', res.data));
+    // tasks: res.data })
   }
 
   handleClickOpen = () => {

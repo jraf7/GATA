@@ -22,7 +22,7 @@ const userSchema = new Schema({
   ],
   journalEntries: [
     {
-      type: String,
+      category: String,
       entry: String,
       createdAt: String
     }
@@ -30,8 +30,8 @@ const userSchema = new Schema({
 
   tasks: [
     {
-      type: String,
       name: String,
+      completed: false,
       createdAt: String
     }
   ]
