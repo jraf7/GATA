@@ -17,14 +17,14 @@ const userSchema = new Schema({
   weightEntries: [
     {
       weight: Number,
-      createdAt: Date
+      createdAt: String
     }
   ],
   journalEntries: [
     {
       type: String,
       entry: String,
-      createdAt: Date
+      createdAt: String
     }
   ],
 
@@ -32,7 +32,7 @@ const userSchema = new Schema({
     {
       type: String,
       name: String,
-      createdAt: Date
+      createdAt: String
     }
   ]
 });
