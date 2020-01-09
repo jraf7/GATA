@@ -23,6 +23,10 @@
     "express": "^4.17.1",
     "if-env": "^1.0.4",
     "mongoose": "^5.8.4",
+    "pondjs": "^0.9.0",
+    "react-charts": "^2.0.0-beta.6",
+    "react-timeseries-charts": "^0.16.1",
+    "rechart": "0.0.1",
     "recharts": "^2.0.0-beta.1"
   }
 }

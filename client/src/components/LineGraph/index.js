@@ -1,55 +1,64 @@
-import React, { PureComponent } from 'react';
+import React, { Component } from 'react';
+import { Chart } from 'react-charts'
 import {
-    LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
-} from 'recharts';
+    Charts,
+    ChartContainer,
+    ChartRow,
+    YAxis,
+    LineChart
+} from "react-timeseries-charts";
+import { TimeSeries, TimeRange } from "pondjs";
 
-const data = [
-    {
-        name: 'Page A', uv: 4000, pv: 2400, amt: 2400,
-    },
-    {
-        name: 'Page B', uv: 3000, pv: 1398, amt: 2210,
-    },
-    {
-        name: 'Page C', uv: 2000, pv: 9800, amt: 2290,
-    },
-    {
-        name: 'Page D', uv: 2780, pv: 3908, amt: 2000,
-    },
-    {
-        name: 'Page E', uv: 1890, pv: 4800, amt: 2181,
-    },
-    {
-        name: 'Page F', uv: 2390, pv: 3800, amt: 2500,
-    },
-    {
-        name: 'Page G', uv: 3490, pv: 4300, amt: 2100,
-    },
-];
-
-class LineGraph extends PureComponent {
-    static jsfiddleUrl = 'https://jsfiddle.net/alidingling/xqjtetw0/';
+class LineGraph extends Component {
 
     render() {
+
         return (
-            <LineChart
-                width={500}
-                height={300}
-                data={data}
-                margin={{
-                    top: 5, right: 30, left: 20, bottom: 5,
-                }}
-            >
-                <CartesianGrid strokeDasharray="3 3" />
-                <XAxis dataKey="name" />
-                <YAxis />
-                <Tooltip />
-                <Legend />
-                <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
-                <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-            </LineChart>
+
+            <ChartContainer timeRange={series1.timerange()} width={800}>
+                <ChartRow height="200">
+                    <YAxis id="axis1" label="AUD" min={0.5} max={1.5} width="60" type="linear" format="$,.2f" />
+                    <Charts>
+                        <LineChart axis="axis1" series={series1} column={["aud"]} />
+                        <LineChart axis="axis2" series={series2} column={["euro"]} />
+                    </Charts>
+                    <YAxis id="axis2" label="Euro" min={0.5} max={1.5} width="80" type="linear" format="$,.2f" />
+                </ChartRow>
+            </ChartContainer>
+
+
         );
+
+
+
     }
+
+
 }
 
+
 export default LineGraph;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
