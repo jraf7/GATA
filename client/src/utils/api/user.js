@@ -14,8 +14,8 @@ delete: function(id) {
     return axios.delete("/api/user/" + id);
 },
 //save a user
-save: function (taskData) {
-    return axios.post("/api/user", taskData);
+save: function (userData) {
+    return axios.post("/api/user", userData);
 }
 }
 

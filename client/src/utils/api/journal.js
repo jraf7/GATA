@@ -18,4 +18,4 @@ const journal =  {
     }
 }
 
-export default task;
+export default journal;

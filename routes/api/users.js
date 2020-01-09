@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const usersController = require("../controllers/usersController");
-const taskRoutes = require("./task");
+const taskRoutes = require("./task.js");
 const weightRoutes = require("./weight");
 const journalRoutes = require("./journal")
 
