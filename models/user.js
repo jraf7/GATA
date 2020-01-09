@@ -17,21 +17,21 @@ const userSchema = new Schema({
   weightEntries: [
     {
       weight: Number,
-      createdAt: String
+      createdAt: Date
     }
   ],
   journalEntries: [
     {
       category: String,
       entry: String,
-      createdAt: String
+      createdAt: Date
     }
   ],
   tasks: [
     {
       name: String,
       completed: false,
-      createdAt: String
+      createdAt: Date
     }
   ]
 });

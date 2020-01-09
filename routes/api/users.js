@@ -10,15 +10,15 @@ router
   .get(usersController.findAll)
   .post(usersController.create);
 
+router.use("/task", taskRoutes);
+router.use("/weight", weightRoutes);
+router.use("/journal", journalRoutes);
+
 //match with "/api/tasks/:id"
 router
   .route("/:id")
   .get(usersController.findById)
   .put(usersController.update)
   .delete(usersController.remove);
-
-router.use("/task", taskRoutes);
-router.use("/weight", weightRoutes);
-router.use("/journal", journalRoutes);
 
 module.exports = router;
