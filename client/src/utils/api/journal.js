@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const journal =  {
+const journal = {
     get: function () {
         return axios.get("/api/user/journals");
     },
@@ -9,7 +9,7 @@ const journal =  {
         return axios.get("/api/user/journals" + id);
     },
     //delete tasks
-    delete: function(id) {
+    delete: function (id) {
         return axios.delete("/api/user/journals/" + id);
     },
     //save a task
@@ -18,4 +18,4 @@ const journal =  {
     }
 }
 
-export default task;
+export default journal;
