@@ -15,6 +15,10 @@ import {
   Select,
   FormControl
 } from "@material-ui/core/";
+import SimpleMenu from "../Menu";
+import WeightPop from "../WeightPop";
+import JournalText from "../JournalText";
+import AddNewAct from "../AddNewAct";
 
 class TrackButton extends Component {
   state = {
@@ -62,11 +66,11 @@ class TrackButton extends Component {
         >
           <DialogTitle id="form-dialog-title">Track Activity</DialogTitle>
           <DialogContent>
-            <DialogContentText>
-              Choose your activity and tap Complete.
-            </DialogContentText>
-            <form>
-              <FormControl>
+            <SimpleMenu />
+            <WeightPop />
+            <JournalText />
+            <AddNewAct />
+            {/* <FormControl>
                 <InputLabel htmlFor="demo-dialog-native">Activity</InputLabel>
                 <Select
                   native
@@ -81,18 +85,8 @@ class TrackButton extends Component {
                     </option>
                   ))}
                 </Select>
-              </FormControl>
-              <TextField
-                autoFocus
-                margin="dense"
-                id="name"
-                multiline
-                rows="4"
-                label="Note"
-                placeholder="Optional"
-                fullWidth
-              />
-            </form>
+              </FormControl> */}
+
           </DialogContent>
           <DialogActions>
             <Button onClick={this.handleClose} color="primary">
@@ -108,3 +102,7 @@ class TrackButton extends Component {
   }
 }
 export default TrackButton;
+
+
+
+
