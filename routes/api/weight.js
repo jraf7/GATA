@@ -4,7 +4,10 @@ const weightController = require("../../controllers/weightsController");
 //match with "/api/users"
 router
   .route("/")
-  .get(weightController.findAll)
+  .get(function (req, res, next) {
+    req.user = { _id: "5e161f25f6b2dd05f01d63f8" };
+    next();
+  }, weightController.findAll)
   .post(weightController.create);
 
 //matcch with "/api/tasks/:id"

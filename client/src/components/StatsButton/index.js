@@ -7,8 +7,9 @@ import {
   DialogActions,
   DialogTitle
 } from "@material-ui/core/";
-
+import ANAmenu from "../ANAmenu";
 import Date from "../Date";
+import ShowStats from "../ShowStats";
 
 function STATS() {
   const [open, setOpen] = React.useState(false);
@@ -40,9 +41,12 @@ function STATS() {
       >
         <DialogTitle id="form-dialog-title">Your Progress</DialogTitle>
         <Date />
+
+        <ShowStats />
+
         <DialogActions>
           <Button onClick={handleClose} color="primary">
-            Done
+            Exit
           </Button>
         </DialogActions>
       </Dialog>

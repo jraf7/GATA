@@ -5,12 +5,10 @@ const userSchema = new Schema({
   username: {
     type: String,
     unique: true,
-    trim: true,
     required: "Username is Required"
   },
   password: {
     type: String,
-    trim: true,
     required: "Password is Required",
     validate: [
       function(input) {
@@ -21,12 +19,10 @@ const userSchema = new Schema({
   },
   firstName: {
     type: String,
-    trim: true,
     required: "A First and Last name is Required"
   },
   lastName: {
     type: String,
-    trim: true,
     required: "A First and Last name is Required"
   },
   email: {
@@ -37,23 +33,22 @@ const userSchema = new Schema({
   weightEntries: [
     {
       weight: Number,
-      createdAt: String
+      createdAt: Date
     }
   ],
   journalEntries: [
     {
       category: String,
       entry: String,
-      trim: true,
-      createdAt: String
+      createdAt: Date
+
     }
   ],
   tasks: [
-    {
-      name: String,
-      trim: true,
+    {,
+      name: String
       completed: false,
-      createdAt: String
+      createdAt: Date
     }
   ]
 });
