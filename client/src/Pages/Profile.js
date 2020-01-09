@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Grid } from '@material-ui/core';
+import { Container, Grid } from "@material-ui/core";
 import { ThemeProvider } from "@material-ui/styles";
 import { makeStyles, createMuiTheme } from "@material-ui/core/styles";
 import { red, grey } from "@material-ui/core/colors";
@@ -7,7 +7,6 @@ import MenuAppBar from "../components/MenuBar";
 import UserContainer from "../components/UserContainer";
 import TrackButton from "../components/TrackButton";
 import STATS from "../components/StatsButton";
-
 
 import "../App.css";
 
@@ -49,13 +48,12 @@ export default function App() {
       <Container className={classes.root}>
         <Grid container spacing={3}>
           <Grid item xs={12}>
-            <MenuAppBar/>
+            <MenuAppBar />
           </Grid>
           <Grid item xs={12}>
-            <UserContainer/>
+            <UserContainer />
           </Grid>
         </Grid>
-        
       </Container>
     </ThemeProvider>
   );
