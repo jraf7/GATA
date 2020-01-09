@@ -4,15 +4,35 @@ const Schema = mongoose.Schema;
 const userSchema = new Schema({
   username: {
     type: String,
-    required: true
+    unique: true,
+    trim: true,
+    required: "Username is Required"
   },
   password: {
     type: String,
-    required: true
+    trim: true,
+    required: "Password is Required",
+    validate: [
+      function(input) {
+        return input.length >= 6;
+      },
+      "Password needs to be at least 6 characters long."
+    ]
   },
-  name: {
+  firstName: {
     type: String,
-    required: true
+    trim: true,
+    required: "A First and Last name is Required"
+  },
+  lastName: {
+    type: String,
+    trim: true,
+    required: "A First and Last name is Required"
+  },
+  email: {
+    type: String,
+    unique: true,
+    match: [/.+@.+\..+/, "Please enter a valid e-mail address"]
   },
   weightEntries: [
     {
@@ -24,12 +44,14 @@ const userSchema = new Schema({
     {
       category: String,
       entry: String,
+      trim: true,
       createdAt: String
     }
   ],
   tasks: [
     {
       name: String,
+      trim: true,
       completed: false,
       createdAt: String
     }
