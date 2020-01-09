@@ -3,19 +3,19 @@ import axios from "axios";
 const user = {
     //get users
 get: function () {
-    return axios.get("/api/users");
+    return axios.get("/api/user");
 },
 //get a user
 getOne: function (id) {
-    return axios.get("/api/users" + id);
+    return axios.get("/api/user" + id);
 },
 //delete a user
 delete: function(id) {
-    return axios.delete("/api/users/" + id);
+    return axios.delete("/api/user/" + id);
 },
 //save a user
 save: function (taskData) {
-    return axios.post("/api/users", taskData);
+    return axios.post("/api/user", taskData);
 }
 }
 

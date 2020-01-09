@@ -6,35 +6,35 @@ const User = require("../../models/user")
 
 module.exports = {
     findAll: function(req, res) {
-        User.tasks
+        User.journalEntries
             .find(req.query)
             .sort({date: -1})
-            .then(dbTasks => res.json(dbTasks))
+            .then(dbJournal => res.json(dbJournal))
             .catch(err => res.status(422).json(err));
     },
     findById: function (req, res) {
-        User.tasks
-            .findById(req.params.id)
-            .then(dbTask => res.json(dbTask))
+        User.journalEntries
+            .find(req.params.id)
+            .then((dbJournal)=> res.json(dbJournal))
             .catch(err => res.status(422).json(err));
     },
     create: function (req, res) {
-        User.tasks
+        User.journalEntries
             .create(req.body)
-            .then(dbTask => res.json(dbTask))
+            .then(dbJournal => res.json(dbJournal))
             .catch(err => res.status(422).json(err))
     },
     update: function (req, res) {
-        User.tasks
+        User.journalEntries
             .findOneAndUpdate({ _id: req.params.id}, req.body)
-            .then(dbTask => res.json(dbTask))
+            .then(dbJournal => res.json(dbJournal))
             .catch(err => res.error(422).json(err))
     },
     remove: function (req, res) {
-        User.tasks
+        User.journalEntries
             .findById( { _id: req.params.id } )
-            .then(dbTask => dbTask.remove())
-            .then(dbTask => res.json(dbTask))
+            .then(dbJournal => dbJournal.remove())
+            .then(dbJournal => res.json(dbJournal))
             .catch(err => res.status(422).json(err))
     }
 };
