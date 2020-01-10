@@ -77,29 +77,6 @@ function ShowStats() {
         }];
     }
 
-    // function formatHabit(dataLabel) {
-    //     const hdata =
-    //         [
-    //             {
-    //                 "id": "men",
-    //                 "label": "Read 10 Min",
-    //                 "value": 13.03334892034305,
-    //                 "color": "#468df3"
-    //             },
-    //             {
-    //                 "id": "women",
-    //                 "label": "women",
-    //                 "value": 13.86676044444814,
-    //                 "color": "#ba72ff"
-    //             },
-    //             {
-    //                 "id": "children",
-    //                 "label": "children",
-    //                 "value": 16.75481706762016,
-    //                 "color": "#a1cfff"
-    //             }
-    //         ];
-
 
     return (
         <div>
@@ -109,7 +86,7 @@ function ShowStats() {
                 <DialogTitle>Show My Stats</DialogTitle>
                 <DialogContent>
                     <LineGraph data={formatData("weight", weightData)} />
-                    {/* <StatHabit hdata={formatHabit("habit", habitData)} /> */}
+                    {/* <StatHabit /> */}
                     <StatJournal />
 
                 </DialogContent>
