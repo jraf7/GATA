@@ -4,39 +4,31 @@ import TextareaAutosize from '@material-ui/core/TextareaAutosize';
 function StatJournal() {
   return (
 
-    <> 
-    <TextareaAutosize
-      rowsMax={4}
-      aria-label="maximum height"
-      placeholder="Maximum 4 rows"
-      defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua."
-    />
+    <>
+      <TextareaAutosize
+        rowsMax={4}
+        aria-label="maximum height"
+        placeholder="Maximum 4 rows"
+        defaultValue="2020-01-20
+        Today's journal - blah blahhblah"
+      />
 
-<TextareaAutosize
-      rowsMax={4}
-      aria-label="maximum height"
-      placeholder="Maximum 4 rows"
-      defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua."
-    />
+      <TextareaAutosize
+        rowsMax={4}
+        aria-label="maximum height"
+        placeholder="Maximum 4 rows"
+        defaultValue="2020-01-10 
+        Today's journal - blah blahhblah"
+      />
 
-<TextareaAutosize
-      rowsMax={4}
-      aria-label="maximum height"
-      placeholder="Maximum 4 rows"
-      defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua."
-    />
-
-    <TextareaAutosize
-      rowsMax={4}
-      aria-label="maximum height"
-      placeholder="Maximum 4 rows"
-      defaultValue="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-          ut labore et dolore magna aliqua."
-    />
-</>
+      <TextareaAutosize
+        rowsMax={4}
+        aria-label="maximum height"
+        placeholder="Maximum 4 rows"
+        defaultValue="2020-01-01
+        Today's journal - blah blahhblah"
+      />
+    </>
   );
 }
 
