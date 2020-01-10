@@ -14,7 +14,11 @@ import TextField from '@material-ui/core/TextField';
 import ANAmenu from '../ANAmenu';
 import LineGraph from "../LineGraph";
 import StatJournal from "../StatJournal";
+// import StatHabit from "StatHabit";
 import axios from 'axios';
+import "./style.css";
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { useTheme } from '@material-ui/core/styles';
 
 const useStyles = makeStyles(theme => ({
     container: {
@@ -31,6 +35,8 @@ function ShowStats() {
     const classes = useStyles();
     const [open, setOpen] = React.useState(false);
     const [age, setAge] = React.useState('');
+    const theme = useTheme();
+    const fullScreen = useMediaQuery(theme.breakpoints.down('lg'));
 
     const handleChange = event => {
         setAge(Number(event.target.value) || '');
@@ -57,7 +63,6 @@ function ShowStats() {
                 setWeightData(newWeightData);
             });
     }, []);
-
     function formatData(dataLabel, initialData) {
         const data = initialData.map(item => {
             return {
@@ -72,14 +77,39 @@ function ShowStats() {
         }];
     }
 
+    // function formatHabit(dataLabel) {
+    //     const hdata =
+    //         [
+    //             {
+    //                 "id": "men",
+    //                 "label": "Read 10 Min",
+    //                 "value": 13.03334892034305,
+    //                 "color": "#468df3"
+    //             },
+    //             {
+    //                 "id": "women",
+    //                 "label": "women",
+    //                 "value": 13.86676044444814,
+    //                 "color": "#ba72ff"
+    //             },
+    //             {
+    //                 "id": "children",
+    //                 "label": "children",
+    //                 "value": 16.75481706762016,
+    //                 "color": "#a1cfff"
+    //             }
+    //         ];
+
+
     return (
         <div>
             <Button onClick={handleClickOpen}>Show My Stats</Button>
-            <Dialog disableBackdropClick disableEscapeKeyDown open={open} onClose={handleClose}>
+            <Dialog fullScreen={fullScreen} disableBackdropClick disableEscapeKeyDown open={open} onClose={handleClose}>
+
                 <DialogTitle>Show My Stats</DialogTitle>
                 <DialogContent>
                     <LineGraph data={formatData("weight", weightData)} />
-
+                    {/* <StatHabit hdata={formatHabit("habit", habitData)} /> */}
                     <StatJournal />
 
                 </DialogContent>

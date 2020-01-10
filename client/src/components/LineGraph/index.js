@@ -7,12 +7,11 @@ import { ResponsiveLine } from '@nivo/line';
 // website examples showcase many properties,
 // you'll often use just a few of them.
 
-
 const LineGraph = ({ data /* see data tab */ }) => (
 
     <ResponsiveLine
         data={data}
-        margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
+        margin={{ top: 50, right: 90, bottom: 50, left: 90 }}
         xSfale={{ type: 'point' }}
         yScale={{ type: 'linear', min: 'auto', max: 'auto', stacked: true, reverse: false }}
         axisTop={null}
@@ -22,7 +21,7 @@ const LineGraph = ({ data /* see data tab */ }) => (
             tickSize: 5,
             tickPadding: 5,
             tickRotation: 0,
-            legend: 'Days',
+            legend: 'Date',
             legendOffset: 36,
             legendPosition: 'middle'
         }}
@@ -31,8 +30,8 @@ const LineGraph = ({ data /* see data tab */ }) => (
             tickSize: 5,
             tickPadding: 5,
             tickRotation: 0,
-            legend: 'Weight',
-            legendOffset: -40,
+            legend: 'Weight (lb)',
+            legendOffset: -55,
             legendPosition: 'middle'
         }}
         colors={{ scheme: 'nivo' }}
@@ -45,32 +44,32 @@ const LineGraph = ({ data /* see data tab */ }) => (
         pointLabelYOffset={-12}
         areaBaselineValue={10}
         useMesh={true}
-        legends={[
-            {
-                anchor: 'bottom-right',
-                direction: 'column',
-                justify: false,
-                translateX: 100,
-                translateY: 0,
-                itemsSpacing: 0,
-                itemDirection: 'left-to-right',
-                itemWidth: 80,
-                itemHeight: 20,
-                itemOpacity: 0.75,
-                symbolSize: 20,
-                symbolShape: 'circle',
-                symbolBorderColor: 'rgba(0, 0, 0, .5)',
-                effects: [
-                    {
-                        on: 'hover',
-                        style: {
-                            itemBackground: 'rgba(0, 0, 0, .03)',
-                            itemOpacity: 1
-                        }
-                    }
-                ]
-            }
-        ]}
+    // legends={[
+    //     {
+    //         anchor: 'bottom-right',
+    //         direction: 'column',
+    //         justify: false,
+    //         translateX: 100,
+    //         translateY: 0,
+    //         itemsSpacing: 0,
+    //         itemDirection: 'left-to-right',
+    //         itemWidth: 80,
+    //         itemHeight: 20,
+    //         itemOpacity: 0.75,
+    //         symbolSize: 20,
+    //         symbolShape: 'circle',
+    //         symbolBorderColor: 'rgba(0, 0, 0, .5)',
+    //         effects: [
+    //             {
+    //                 on: 'hover',
+    //                 style: {
+    //                     itemBackground: 'rgba(0, 0, 0, .03)',
+    //                     itemOpacity: 1
+    //                 }
+    //             }
+    //         ]
+    //     }
+    // ]}
     />
 )
 
