@@ -1,4 +1,5 @@
 # GATA
+Start today: https://gatahabit.herokuapp.com/
 #### Goals. Action. Track. Adjust.
 Start 2020 off nicely and help build your best self with GATA. This app allows you to track your New Year's Resolutions by monitoring the daily goals you established. Viewing your history of daily successes allows motivation to flourish.
 

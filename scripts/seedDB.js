@@ -70,7 +70,9 @@ const userSeed = [
   {
     username: "username",
     password: "password",
-    name: "Joe Dirt",
+    firstName: "Joe",
+    lastName: "Dirt",
+    email: "joedirt@amazinggrowth.com",
     weightEntries: weightSeed,
     tasks: taskSeed,
     journalEntries: journal
