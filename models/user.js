@@ -11,7 +11,7 @@ const userSchema = new Schema({
     type: String,
     required: "Password is Required",
     validate: [
-      function(input) {
+      function (input) {
         return input.length >= 6;
       },
       "Password needs to be at least 6 characters long."
@@ -45,8 +45,8 @@ const userSchema = new Schema({
     }
   ],
   tasks: [
-    {,
-      name: String
+    {
+      name: String,
       completed: false,
       createdAt: Date
     }
